@@ -4,6 +4,7 @@
  */
 package tools;
 
+import java.util.Date;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
@@ -42,6 +43,21 @@ public class Util {
     }
     public static int strToInt(String num){
         return Integer.valueOf(num);
+    }
+    public static String intToStr(int num){
+        return String.valueOf(num);
+    }
+    public static Double strToDouble(double num){
+        return Double.valueOf(num);
+    }
+    public static String doubleToStr(String num){
+        return String.valueOf(num);
+    }
+    public static Date strToDate(String data){
+        return Date.valueOf(data);
+    }
+    public static String dateToStr(Date data){
+        return String.valueOf(data) ;
     }
 }
 

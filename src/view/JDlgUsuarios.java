@@ -265,10 +265,8 @@ public class JDlgUsuarios extends javax.swing.JDialog {
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
         Util.pergunta("gostaria de limpar os campos?");
-        if(Util.pergunta == true){
         Util.limpar( jTxtNome, jTxtCodigo, jTxtApelido,jFmtCpf, jCboNivel,
                         jFmtDataDeNascimento, jPwfSenha, jCboNivel, jChbAtivo);
-        }
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
 
