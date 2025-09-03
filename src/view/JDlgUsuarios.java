@@ -5,6 +5,7 @@
  */
 package view;
 
+import javax.swing.JComboBox;
 import tools.Util;
 
 
@@ -22,7 +23,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
-        Util.habilitar(true, jTxtNome, jTxtCodigo, jTxtApelido,jFmtCpf, jCboNivel,
+        Util.habilitar(false, jTxtNome, jTxtCodigo, jTxtApelido,jFmtCpf, jCboNivel,
                         jFmtDataDeNascimento, jPwfSenha, jCboNivel, jChbAtivo,
                         jBtnConfirmar, jBtnCancelar    );
         
@@ -263,20 +264,24 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
-
+        Util.pergunta("gostaria de limpar os campos?");
+        if(Util.pergunta == true){
+        Util.limpar( jTxtNome, jTxtCodigo, jTxtApelido,jFmtCpf, jCboNivel,
+                        jFmtDataDeNascimento, jPwfSenha, jCboNivel, jChbAtivo);
+        }
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         // TODO add your handling code here:
- 
+        int cod = Util.strToInt(jTxtCodigo.getText());
 
 
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
         // TODO add your handling code here: 
-
+        Util.mensagem("Não implementado");
 
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
