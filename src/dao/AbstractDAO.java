@@ -16,7 +16,9 @@ public abstract class  AbstractDAO {
     public Session session;
     
     public AbstractDAO(){
-        SessionFactory sessionFactory = HibernateUtil.getSe
+        SessionFactory sessionFactory = HibernateUtil.getSet
+                
+                
         session = sessionFactory.openSession();
     }
     public abstract void insert(Object object);

@@ -2,7 +2,7 @@ package bean;
 // Generated 10/09/2025 16:49:32 by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
@@ -24,8 +24,8 @@ public class Produtos  implements java.io.Serializable {
 
      private int idprodutos;
      private String nome;
-     private BigDecimal valorUnitario;
-     private Integer grupo;
+     private double valorUnitario;
+     private int grupo;
      private Set pedidosProdutoses = new HashSet(0);
 
     public Produtos() {
@@ -35,7 +35,7 @@ public class Produtos  implements java.io.Serializable {
     public Produtos(int idprodutos) {
         this.idprodutos = idprodutos;
     }
-    public Produtos(int idprodutos, String nome, BigDecimal valorUnitario, Integer grupo, Set pedidosProdutoses) {
+    public Produtos(int idprodutos, String nome, double valorUnitario, int grupo, Set pedidosProdutoses) {
        this.idprodutos = idprodutos;
        this.nome = nome;
        this.valorUnitario = valorUnitario;
@@ -67,21 +67,21 @@ public class Produtos  implements java.io.Serializable {
 
     
     @Column(name="valorUnitario", precision=10)
-    public BigDecimal getValorUnitario() {
+    public double getValorUnitario() {
         return this.valorUnitario;
     }
     
-    public void setValorUnitario(BigDecimal valorUnitario) {
+    public void setValorUnitario(double valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
 
     
     @Column(name="grupo")
-    public Integer getGrupo() {
+    public int getGrupo() {
         return this.grupo;
     }
     
-    public void setGrupo(Integer grupo) {
+    public void setGrupo(int grupo) {
         this.grupo = grupo;
     }
 
