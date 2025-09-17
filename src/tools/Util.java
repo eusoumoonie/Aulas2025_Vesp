@@ -54,7 +54,7 @@ public class Util {
         return String.valueOf(num);
     }
     public static Date strToDate(String data){
-        return Date.valueOf(data);
+        return null;//Date.valueOf(data);
     }
     public static String dateToStr(Date data){
         return String.valueOf(data) ;
